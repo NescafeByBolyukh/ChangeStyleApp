@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>lesson9</title>
+	<link rel="stylesheet" href="main9.css">
+</head>
+
+<body>
+	<div id="big">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	</div>
+
+
+	<div id="inputs">
+		<input type="button" value="edit" id="edit">
+		<input type="button" value="style" id="style">
+	</div>
+
+
+	<div id="textArea">
+		<textarea name="" id="textArea2"></textarea>
+
+		<div id="inputs2">
+			<input type="button" value="add" id="add">
+			<input type="button" value="save" id="save">
+		</div>
+	</div>
+
+
+
+	<div id="textStyle">
+
+		<p>Font-size:</p>
+		<form action="">
+			<input type="radio" id="12px" name="font" value="rad1">12px
+			<input type="radio" id="14px" name="font" value="rad2">14px
+			<input type="radio" id="16px" name="font" value="rad3">16px
+			<input type="radio" id="18px" name="font" value="rad4">18px
+			<input type="radio" id="20px" name="font" value="rad5">20px
+		</form>
+
+		<p>Font-family:</p>
+		<select name="" id="SelectFont" onchange="ChangeFont (this);" size="1">
+			<option value="Choose option" id="chooseOption">Choose option</option>
+			<option value="cursive" id="cursive">Cursive</option>
+			<option value="fantasy" id="fantasy">Fantasy</option>
+			<option value="monospace" id="monospace">Monospace</option>
+			<option value="sans-serif" id="sansSerif">Sans-serif</option>
+		</select>
+
+		<p>Colors:</p>
+		<input type="button" value="Color of Text" id="textColor">
+		<input type="button" value="Background color" id="backgroundColor">
+
+		<p>Font-style:</p>
+		<input type="checkbox" id="italic">italic
+		<input type="checkbox" id="bold">bold
+
+		<div id="colorPick">
+			<div id="one"></div>
+			<div id="two"></div>
+			<div id="three"></div>
+			<div id="four"></div>
+			<div id="five"></div>
+			<div id="six"></div>
+			<div id="seven"></div>
+			<div id="eight"></div>
+			<div id="nine"></div>
+		</div>
+		<div id="colorPick2">
+			<div id="one2"></div>
+			<div id="two2"></div>
+			<div id="three2"></div>
+			<div id="four2"></div>
+			<div id="five2"></div>
+			<div id="six2"></div>
+			<div id="seven2"></div>
+			<div id="eight2"></div>
+			<div id="nine2"></div>
+		</div>
+	</div>
+	<div id="choose">
+		<h2>Choose what you want:</h2>
+		<form action="" id="creator">
+			<input type="radio" id="table1" name="choose" value="rad1">Table
+			<input type="radio" id="list1" name="choose" value="rad2">List
+		</form>
+
+		<div id="createTable">
+			<form action="" method="get" name="f1" id="f1">
+				<span>Count TR:</span>
+				<input type="text" name="count TR" id="tr" required placeholder="Count TR...">
+				<br>
+				<span>Count TD:</span>
+				<input type="text" name="count TD" id="td" required placeholder="Count TD...">
+			</form>
+			<h3>Add style to your table:</h3>
+			<form action="" method="get" name="f2" id="f2">
+				<span>Width of TD:</span>
+				<input type="text" name="Width of TD" id="widthTd" required placeholder="Width of TD...">
+				<br>
+				<span>Height of TD:</span>
+				<input type="text" name="Height of TD:" id="heightTd" required placeholder="Height of TD...">
+				<br>
+				<span>Width of border:</span>
+				<input type="text" name="Width of border:" id="borderWidth" required placeholder="Width of border...">
+				Type of border:
+
+				<select name="" id="typeOfBorder2" size="1">
+					<option value="solid" id="solid">Solid</option>
+					<option value="dotted" id="dotted">Dotted</option>
+					<option value="dashed" id="dashed">Dashed</option>
+					<option value="double" id="double">Double</option>
+				</select>
+
+				Color of border:
+
+				<select name="" id="colorOfBorder2" size="1">
+					<option value="Black" id="borderBlack">Black</option>
+					<option value="Red" id="borderRed">Red</option>
+					<option value="Blue" id="borderBlue">Blue</option>
+					<option value="Green" id="borderGreen">Green</option>
+				</select>
+
+			</form>
+			<input type="button" value="Create table" id="submit" style="color: white; background-color: limegreen">
+		</div>
+
+		<div id="createList">
+
+			<form action="" id="countLi">
+				<span>Count li:</span>
+				<input type="text" name="Count li" id="countLi2" required placeholder="Count li...">
+				<br>
+				<span>Type of marks:</span>
+				<select name="typeOfMarks2" id="typeOfMarks2" size="1">
+					<option value="circle" id="circle">Circle</option>
+					<option value="disc" id="disc">Disc</option>
+					<option value="square" id="square">Square</option>
+
+				</select>
+				<br>
+				<br>
+				<input type="button" value="Create list" id="submit2" style="color: white; background-color: limegreen">
+			</form>
+		</div>
+
+	</div>
+
+
+	<div id="buffer"></div>
+
+
+
+
+	<!--
+<form action="contacts.html" method="get">
+                    <span>Ім'я<sup>*</sup></span>
+                    <input type="text" name="firstname" required placeholder="First name">
+                    <br>
+                    <br>
+                    <span>Прізвище:<sup>*</sup></span>
+                    <input type="text" name="secondname" required placeholder="Second name">
+                    <br>
+                    <br>
+                    <span>Email:</span>
+                    <input type="email" name="email" placeholder="Email">
+                    <br>
+                    <br>
+                    <span>Пароль:</span>
+                    <input type="text" placeholder="Password">
+                    <br>
+                    <br>
+                    <span>Підтердження паролю:</span>
+                    <input type="text" placeholder="Confirm your password">
+                    <br>
+                    <span><small>Поля, позначені <sup>*</sup> - є обов’язковими для заповнення</small></span>
+                    <br>
+                    <br>
+                    <input type="submit" value="Відправити">
+                </form>-->
+	<script src="script.js"></script>
+</body>
+
+</html>
